@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vegan Vending Machine</title>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/chocVendingMachine.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<div class="vending-machine-container">
+  <div class="money-stuff left">
+    <h3>Coin Slot:</h3>
+    <p>10c, 20c, 50c, $1, or $2 coins only!</p>
+    <form name="desposit" action="">
+      <button type="button" id="deposit-10c" onclick="addCoin('5c')">5c</button>
+      <button type="button" id="deposit-10c" onclick="addCoin('10c')">10c</button>
+      <button type="button" id="deposit-20c" onclick="addCoin('20c')">20c</button>
+      <button type="button" id="deposit-50c" onclick="addCoin('50c')">50c</button>
+      <button type="button" id="deposit-$1" onclick="addCoin('$1')">$1</button>
+      <button type="button" id="deposit-$2" onclick="addCoin('$2')">$2</button>
+    </form>
+    <h3>Current Credit:</h3>
+    <span>$<span class="current-credit">0.00</span></span>
+    <button id="returnCoins" onclick="returnCoins()">Return Coins</button>
+
+    <h3>Return Chute:</h3>
+    <div class="return-message"></div>
+  </div>
+  <div class="vending-selection right">
+    <button value="Caramel" onclick="buyItem('caramel')" id="caramel" disabled="true">Caramel <span>- $2.50</span></button>
+    <button value="hazelnut" onclick="buyItem('hazelnut')" id="hazelnut" disabled="true">Hazelnut <span>- $3.10</span></button>
+    <button value="OrganicRaw" onclick="buyItem('organicRaw')" id="organicRaw" disabled="true">Organic Raw <span>- $2.00</span></button>
+  </div>
+</div>
+
+</html>
