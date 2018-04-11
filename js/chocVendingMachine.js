@@ -90,6 +90,7 @@ var buyItem = function(item) {
     toggleButton();
     updateDisplayedCredit();
     coinHolder = {"5c": 0, "10c": 0, "20c": 0, "50c": 0, "$1": 0, "$2": 0};
+    return true;
   } else if (totalCredit > itemIndex[item]) {
     returnChuteMessage("You have too much credit.");
     throw new Error("You have too much credit.");
